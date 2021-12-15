@@ -27,7 +27,7 @@ $searchForm.on('submit', async function(e) {
   const $searchString = $('.search-bar').val()
   const urlEncodedSearchString = encodeURIComponent($searchString)
 
-  const response = await fetch(`http://www.omdbapi.com/?apikey=59354c85&s=${urlEncodedSearchString}`)
+  const response = await fetch(`https://www.omdbapi.com/?apikey=59354c85&s=${urlEncodedSearchString}`)
   result = await response.json() 
   
   if (result.Search) {
